@@ -9,39 +9,35 @@ class CustomDesign extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          // Section: Image with rounded borders and blue border
           Container(
             color: Colors.red,
             width: 350,
             height: 275,
             child: Center(
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(20), // Adjust for desired curve
+                borderRadius: BorderRadius.circular(20),
                 child: Container(
                   decoration: BoxDecoration(
-                    border: Border.all(color: Colors.blue, width: 7), // Blue border
-                    borderRadius: BorderRadius.circular(20), // Match the border radius for consistency
+                    border: Border.all(color: Colors.blue, width: 7),
+                    borderRadius: BorderRadius.circular(20),
                   ),
                   child: Image.asset(
-                    'assets/rdr2.png', // Replace with your image path
-                    fit: BoxFit.cover, // Ensure the image covers the entire area
+                    'assets/rdr2.png',
+                    fit: BoxFit.cover,
                   ),
                 ),
               ),
             ),
           ),
-
-          // Section: Column of numbers with blue and green blocks behind
           Stack(
             alignment: Alignment.center,
             children: [
-              // Blue background block
+
               Container(
                 width: 100,
                 height: 75,
                 color: Colors.blue,
               ),
-              // Green block positioned on top of blue
               Positioned(
                 right: 50,
                 child: Container(
@@ -50,7 +46,6 @@ class CustomDesign extends StatelessWidget {
                   color: Colors.green,
                 ),
               ),
-              // Numbers in red
               Container(
                 width: 30,
                 height: 200,
@@ -72,8 +67,6 @@ class CustomDesign extends StatelessWidget {
               ),
             ],
           ),
-
-          // Text Section: Instructional Text
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16.0),
             child: Text(
@@ -86,7 +79,6 @@ class CustomDesign extends StatelessWidget {
             ),
           ),
 
-          // Bottom Section: Two circular images with labels (optional)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
